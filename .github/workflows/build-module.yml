@@ -12,16 +12,16 @@ jobs:
     strategy:
       matrix:
         build_env:
-          - tag: "23.05.5"
+          - tag: "24.10.0"
             pkgarch: mipsel_24kc
             target: ramips
             subtarget: mt76x8
-            vermagic: "81d2030506bf6ad3027d9c549b1e93da"
+            vermagic: "r1"
           
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: openwrt/openwrt
+          repository: immortalwrt/immortalwrt
           ref: v${{ matrix.build_env.tag }}
           fetch-depth: 0
 
